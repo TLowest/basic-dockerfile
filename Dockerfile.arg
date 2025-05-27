@@ -1,0 +1,11 @@
+# Use Ubuntu as the base image
+FROM ubuntu:latest
+
+# Define a build-time argument with a default value
+ARG NAME=Captain
+
+# Persits the value into the runtime enviornment
+ENV NAME=${NAME}
+
+CMD ["sh", "-c", "echo Hello, $NAME!"]
+
