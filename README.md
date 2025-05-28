@@ -21,8 +21,7 @@ When the container is run, it will execute a command to display a custom greetin
 
 1. Clone this repository or create your own directory with a `Dockerfile`.
 
-(*Optional but recommended*) 
-In order to run Docker without `sudo`:
+- (*Optional but recommended*) In order to run Docker without `sudo`:
 ```BASH
 sudo usermod -aG docker $USER
 ```
@@ -37,27 +36,27 @@ docker build -t hello-captain .
 docker run --rm hello-captain 
 ```
 
-After running the container, you should see the following output in the terminal:
+- After running the container, you should see the following output in the terminal:
 ```BASH
 Hello, Captain!
 ```
 
 ---
 ## Optional Enhancement
-To make the greeting dynamic, while preserving the original `Dockerfile` and avoid overwriting it, you can create a second one:
+- To make the greeting dynamic, while preserving the original `Dockerfile` and avoid overwriting it, you can create a second one:
 ```BASH
 Dockerfile.arg
 ```
-Then build using the `-f` flag and your name:
+- Then build using the `-f` flag and your name:
 ```BASH
 docker build -f Dockerfile.arg -t hello-name --build-arg NAME=<insert_name>
 ```
-Run the image:
+- Run the image:
 ```BASH
 docker run --rm hello-name
 ```
 
-After running the container, you should see the following output in the terminal: 
+- After running the container, you should see the following output in the terminal: 
 ```BASH
 Hello, <inserted_name>!
 ```
@@ -65,5 +64,6 @@ Hello, <inserted_name>!
 ---
 ## Learn More
 Refer to the offical Dockerfile reference:
+
 [Dockerfile Documentation](https://docs.docker.com/reference/dockerfile/)
 
